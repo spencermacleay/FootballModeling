@@ -1,0 +1,8 @@
+{
+    "class_weight": "balanced",
+    "criterion": "gini",
+    "max_depth": 110,
+    "max_features": 6,
+    "min_impurity_decrease": 0.0,
+    "oob_score": false
+}
