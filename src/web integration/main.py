@@ -107,7 +107,7 @@ def createDataframe(values):
     values_df['2nd_1-2'] = ((values_df['pff_DOWN'] == 2) & (values_df['pff_DISTANCE'].between(1, 2))).astype(int)
     values_df['3rd_11+'] = ((values_df['pff_DOWN'] == 3) & (values_df['pff_DISTANCE'].between(11, 999))).astype(int)
     values_df['3rd_7-10'] = ((values_df['pff_DOWN'] == 3) & (values_df['pff_DISTANCE'].between(7, 10))).astype(int)
-    values_df['3rd_6-4'] = ((values_df['pff_DOWN'] == 3) & (values_df['pff_DISTANCE'].between(6, 4))).astype(int)
+    values_df['3rd_6-4'] = ((values_df['pff_DOWN'] == 3) & (values_df['pff_DISTANCE'].between(4, 6))).astype(int)
     values_df['3rd_1-3'] = ((values_df['pff_DOWN'] == 3) & (values_df['pff_DISTANCE'].between(1, 3))).astype(int)
     values_df['4th_11+'] = ((values_df['pff_DOWN'] == 4) & (values_df['pff_DISTANCE'].between(11, 999))).astype(int)
     values_df['4th_6-10'] = ((values_df['pff_DOWN'] == 4) & (values_df['pff_DISTANCE'].between(6, 10))).astype(int)
@@ -115,7 +115,7 @@ def createDataframe(values):
     values_df['4th_1-2'] = ((values_df['pff_DOWN'] == 4) & (values_df['pff_DISTANCE'].between(1, 2))).astype(int)
 
     values_df['Q1_11:00-15:00'] = ((values_df['pff_QUARTER'] == 1) & (values_df['pff_CLOCK'].between(timeToSecs("11:00"), timeToSecs("15:00")))).astype(int)
-    values_df['Q1_7:00-10:59'] = ((values_df['pff_QUARTER'] == 1) & (values_df['pff_CLOCK'].between(timeToSecs("11:00"), timeToSecs("15:00")))).astype(int)
+    values_df['Q1_7:00-10:59'] = ((values_df['pff_QUARTER'] == 1) & (values_df['pff_CLOCK'].between(timeToSecs("7:00"), timeToSecs("10:59")))).astype(int)
     values_df['Q1_3:00-6:59'] = ((values_df['pff_QUARTER'] == 1) & values_df['pff_CLOCK'].between(timeToSecs("3:00"), timeToSecs("6:59"))).astype(int)
     values_df['Q1_0-2:59'] = ((values_df['pff_QUARTER'] == 1) & values_df['pff_CLOCK'].between(timeToSecs("0:00"), timeToSecs("2:59"))).astype(int)
 
